@@ -1,4 +1,4 @@
 import './style.css'
-import { compDay0 } from './components/day0';
+import { compDay1 } from './components/day1';
 
-document.querySelector('#app').innerHTML = compDay0;
+document.querySelector('#app').innerHTML = compDay1;
