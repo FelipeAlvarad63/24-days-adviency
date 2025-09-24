@@ -31,10 +31,7 @@ body {
 }
 
 body {
-  background: url(/assets/img_arbol_navidad.png), var(--color-green);
-  background-position: left bottom;
-  background-size: 40%;
-  background-repeat: no-repeat;
+  background: no-repeat left bottom/40% url(/assets/img_arbol_navidad.png), var(--color-green);
 }
 
 .container__adviency {
