@@ -31,7 +31,7 @@ body {
 }
 
 body {
-  background: no-repeat left bottom/40% url(/assets/img_arbol_navidad.png), var(--color-green);
+  background: no-repeat left bottom/40% url('https://res.cloudinary.com/dpioamvfm/image/upload/v1758678907/img_arbol_navidad_yuurii.png'), var(--color-green);
 }
 
 .container__adviency {
