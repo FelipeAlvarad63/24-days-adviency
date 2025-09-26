@@ -1,0 +1,59 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  /*
+  Colors based on the Christmas theme
+  --primary-red: #e03131;
+  --color-secondary-golden: #ffd43b;
+  --color-white: #ffffffde;
+  --color-green: #006400;
+  */
+
+
+  --color-primary-red: #e03131;
+  --color-secondary-golden: #ffd43b;
+  --color-white: #ffffffde;
+  --color-green: #006400;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+body {
+  background: no-repeat left bottom/30% url('https://res.cloudinary.com/dpioamvfm/image/upload/v1758678907/img_arbol_navidad_yuurii.png'), var(--color-green);
+}
+
+.container__adviency {
+  background-color: var(--color-primary-red);
+  color: var(--color-white);
+  padding: 2rem;
+  border: 2px solid var(--color-secondary-golden);
+  border-radius: 1rem;
+}
+
+.container__adviency .title {
+  color: var(--color-secondary-golden);
+}
+
+.container__adviency .container__gifts {
+  list-style: none;
+  padding: 0;
+}
+
+.container__adviency .container__gifts .gift-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
