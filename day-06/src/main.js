@@ -17,6 +17,8 @@ function render() {
       <ul class="container__gifts">
         ${updateListHtml(giftList)}
       </ul>
+
+      <button id="btn-remove-all">Borrar todos</button>
     </main>
   `
 }
@@ -31,21 +33,26 @@ function handleFormSubmit(event) {
   const inputAddGift = document.getElementById('input-add-gift')
   const newGift = inputAddGift.value.trim()
 
-  if (newGift) {
+  if (newGift && !giftList.some(gift => gift.name.toLowerCase() == newGift.toLowerCase())) {
     giftList.push({id: Date.now(), name: newGift})
     updateGiftList(giftList)
+    inputAddGift.value = ""
+  } else {
     inputAddGift.value = ""
   }
 }
 
 function handleRemoveGift(event) {
   if (event.target.classList.contains("btn-remove-gift")) {
-    console.log(event);
     const giftItem = event.target.closest('.gift-item')
     giftList.splice(giftList.findIndex(gift => gift.id == parseInt(giftItem.dataset.id)), 1)
     updateGiftList(giftList)
-    console.log(giftList);
   }
+}
+
+function handlleRemoveAllGifts() {
+  giftList.splice(0, giftList.length)
+  updateGiftList(giftList)
 }
 
 function init() {
@@ -55,6 +62,10 @@ function init() {
 
   const contGifts = document.querySelector(".container__gifts")
   contGifts.addEventListener('click', handleRemoveGift)
+
+
+  const btnRemoveAll = document.getElementById('btn-remove-all')
+  btnRemoveAll.addEventListener('click', handlleRemoveAllGifts)
 }
 
 init()

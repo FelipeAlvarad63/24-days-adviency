@@ -38,3 +38,17 @@ body {
   border: 2px solid var(--color-secondary-golden);
 }
 
+.container__adviency .title {
+  color: var(--color-secondary-golden);
+}
+
+.container__adviency .container__gifts {
+  list-style: none;
+  padding: 0;
+}
+
+.container__adviency .container__gifts .gift-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
