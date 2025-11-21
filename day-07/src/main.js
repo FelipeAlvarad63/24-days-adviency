@@ -8,7 +8,7 @@ const giftList = [
 function render() {
   document.querySelector('#app').innerHTML = `
     <main class="container__adviency">
-      <h1 class="title">Regalos</h1>
+      <h1 class="title text-3xl font-bold underline">Regalos</h1>
       <form class="container__form">
         <input id="input-add-gift" type="text" placeholder="Agregar regalo"/>
         <button type="submit">Agregar</button>
@@ -18,7 +18,7 @@ function render() {
         ${updateListHtml(giftList)}
       </ul>
 
-      <button id="btn-remove-all">Borrar todos</button>
+      <button id="btn-remove-all" class="bg-sky-500">Borrar todos</button>
     </main>
   `
 }
